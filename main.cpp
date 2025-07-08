@@ -1,25 +1,13 @@
 #include "includes.hpp"
-
-#include "player.hpp"
+#include "game.hpp"
 
 int main()
 {
-    Player _player;
-    _player.displayStats();
-    _player.takeDamage(10);
-    _player.displayStats();
-    _player.giveGold(10);
-    _player.displayStats();
-    _player.giveGold(-10);
-    _player.displayStats();
-    _player.giveGold(-10);
-    _player.displayStats();
-    _player.addXP(70.9);
-    _player.displayStats();
-    _player.addXP(109.9);
-    _player.displayStats();
-    _player.addXP(290.9);
-    _player.displayStats();
+    std::cout << "Welcome to the game" << "\n\n";
+
+    Game game;
+    game.Play();
+    
 
     return 0;
 }

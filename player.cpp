@@ -44,6 +44,16 @@ void Player::takeDamage(int amount)
     }
 }
 
+void Player::giveHealth(int amount) 
+{
+    if(amount > 100) { std::cout << "\n value exceeds max health value!" << "\n\n"; return; }
+    if(Health >= 100) { std::cout << "\n You are max health!"; Health = 100; return; }
+
+    Health += amount;
+
+    std::cout << "\nHealed! new health: " << std::to_string(Health) << "\n\n";
+}
+
 void Player::giveGold(int amount) 
 {
     if(amount >= INT32_MAX) { std::cout << "\nthis value exists the max possible value!" << "\n\n"; return; }
@@ -74,4 +84,9 @@ void Player::addXP(double amount)
 void Player::OnLevelUp()
 {
     std::cout << "\nLevel up! You reached level: " << Level << "!" << "\n\n";
+}
+
+bool Player::isPlayerAlive()
+{
+    return Health > 0;
 }

@@ -20,9 +20,12 @@ class Player {
 
     void displayStats();
     void takeDamage(int amount);
+    void giveHealth(int amount);
     void giveGold(int amount);
     void addXP(double amount);
     void OnLevelUp();
+
+    bool isPlayerAlive();
 };
 
 
